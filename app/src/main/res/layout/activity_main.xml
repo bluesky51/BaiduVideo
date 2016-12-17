@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/videoview_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baidu.cyberplayer.core.BVideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/btn_fullscreen"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/btn_to_fullscreen"
+                />
+            <Button
+                android:text="360P"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/btn_fullscreen"
+                android:id="@+id/btn_resolution"
+                android:background="@drawable/rounded_corners_white"
+                />
+            <!--进度条及文字展示进度-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btn_play"
+                android:layout_toLeftOf="@id/btn_resolution">
+                <TextView
+                    android:id="@+id/tvCurrentDuration"
+                    android:layout_width="wrap_content"
+                    android:text="00:00"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorAccent"
+                    android:layout_height="wrap_content" />
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tvMaxDuration"
+                    android:layout_toRightOf="@+id/tvCurrentDuration"
+                    android:id="@+id/seekBar"
+                    />
+                <TextView
+                    android:id="@+id/tvMaxDuration"
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="00:00"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:src="@mipmap/item_continue"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/btn_play" />
+
+        </RelativeLayout>
+
+        <Button
+            android:text="切换视频文件"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </com.baidu.cyberplayer.core.BVideoView>
+
+</RelativeLayout>
+
