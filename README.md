@@ -1,17 +1,17 @@
-# BaiduVideo
-使用百度云提供开源播放完成了一些基本功能，例如：播放暂停继续，进度条以及视频全屏，切换视频地址重新播放等,适合初学者学习用；
+此demo是利用百度云直播提供的播放器完成的视屏播放，主要功能有，播放暂停继续，进度条以及视频全屏，切换视频地址重新播放等；
 
 例子的具体说明步骤：
 1.集成百度云播放器：
   1》添加libs依赖库：cyberplayer-sdk.jar
   2》添加so文件库(主要支持arm64-v8a和armabi-v7a):使用jniLibs进行导入：
-  3》申请access Key:申请地址：https://console.bce.baidu.com/iam/?_=1481952806347#/iam/accesslist
+  3》申请access Key:申请地址：
+  https://console.bce.baidu.com/iam/?_=1481952806347#/iam/accesslist
   4》添加权限：
-      <uses-permission android:name="android.permission.INTERNET" />
-      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-      <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+     <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
    5》使用BVideoView进行视频播放(BMediaController在本人测试机华为荣耀8，android7.0的系统崩溃无法使用，所以控制都是自己定义完成)
 
 2.xml文件UI书写
@@ -48,7 +48,7 @@
       @Override
       public boolean onPositionUpdate(long newPositionIiSeconds) {
 
-          long newPositionInSeconds = newPositionIiSeconds / 1000;
+          long newPositionInSeconds = newPositionInSecondsonIiSeconds / 1000;
           long previousPosition = currentPositionInSeconds;
           if (newPositionInSeconds > 0 && !getIsDragging()) {
               currentPositionInSeconds = newPositionInSeconds;
