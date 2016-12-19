@@ -5,11 +5,11 @@
   3》申请access Key:申请地址<br />  
   https://console.bce.baidu.com/iam/?_=1481952806347#/iam/accesslist <br /> 
   4》添加权限 <br />  
-     <uses-permission android:name="android.permission.INTERNET" /><br />  
-     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/><br />  
-     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/><br />  
-     <uses-permission android:name="android.permission.WRITE_SETTINGS" /><br />  
-     <uses-permission android:name="android.permission.READ_PHONE_STATE" /><br />  
+     <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>  
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
+     <uses-permission android:name="android.permission.WRITE_SETTINGS" />  
+     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> 
    5》使用BVideoView进行视频播放(BMediaController在本人测试机华为荣耀8，android7.0的系统崩溃无法使用，所以控制都是自己定义完成)<br />  
 2.xml文件UI书写<br />  
 3.java代码<br />  
