@@ -1,16 +1,16 @@
-例子的具体说明步骤:<br />    
-1.集成百度云播放器:<br />  
-  1》添加libs依赖库：cyberplayer-sdk.jar <br />  
-  2》添加so文件库(主要支持arm64-v8a和armabi-v7a):使用jniLibs进行导入  <br />  
-  3》申请access Key:申请地址<br />  
-  https://console.bce.baidu.com/iam/?_=1481952806347#/iam/accesslist <br /> 
-  4》添加权限 <br />  
-     <uses-permission android:name="android.permission.INTERNET" />
+例子的具体说明步骤:  
+1.集成百度云播放器:  
+  1》添加libs依赖库：cyberplayer-sdk.jar  
+  2》添加so文件库(主要支持arm64-v8a和armabi-v7a):使用jniLibs进行导入  
+  3》申请access Key:申请地址如下:  
+ https://console.bce.baidu.com/iam/?_=1481952806347#/iam/accesslist  
+  4》添加权限  
+     <uses-permission android:name="android.permission.INTERNET" />  
      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>  
      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>  
      <uses-permission android:name="android.permission.WRITE_SETTINGS" />  
-     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> 
-   5》使用BVideoView进行视频播放(BMediaController在本人测试机华为荣耀8，android7.0的系统崩溃无法使用，所以控制都是自己定义完成)<br />  
+     <uses-permission android:name="android.permission.READ_PHONE_STATE" />  
+   5》使用BVideoView进行视频播放(BMediaController在本人测试机华为荣耀8，android7.0的系统崩溃无法使用，所以控制都是自己定义完成)  
 2.xml文件UI书写<br />  
 3.java代码<br />  
   1.查找控件，主要是对BVideoView进行配置，设置以下监<br />  
